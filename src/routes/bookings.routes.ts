@@ -1,6 +1,6 @@
 // src/routes/bookings.routes.ts
 import { Router, Request, Response } from 'express';
-import { bookings, Booking } from '../data/bookings';
+import { bookings } from '../data/bookings';
 
 const router = Router();
 
