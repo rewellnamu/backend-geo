@@ -4,7 +4,7 @@ import { bookings, Booking } from '../data/bookings';
 
 const router = Router();
 
-router.post('/', (req: any, res: any) => {
+router.post('/', (req: Request, res: Response) => {
   const { fullName, email, park, date, guests } = req.body;
 
   if (!fullName || !email || !park || !date || !guests) {
