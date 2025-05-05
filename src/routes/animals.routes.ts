@@ -1,10 +1,7 @@
-import express from 'express';
-import { animals } from '../data/animals';
+import { Router } from 'express';
+import { fetchAnimals } from '../controllers/animals.controller';
 
-const router = express.Router();
-
-router.get('/', (_req, res) => {
-  res.json(animals);
-});
+const router = Router();
+router.get('/', fetchAnimals);
 
 export default router;
