@@ -1,10 +1,12 @@
-import express from 'express';
-import { parks } from '../data/parks';
+import { Router } from 'express';
+import * as ParkController from '../controllers/parks.controller';
 
-const router = express.Router();
+const router = Router();
 
-router.get('/', (_req, res) => {
-  res.json(parks);
-});
+router.get('/', ParkController.getParks);
+router.get('/:id', ParkController.getPark);
+router.post('/', ParkController.create);
+router.put('/:id', ParkController.update);
+router.delete('/:id', ParkController.remove);
 
 export default router;
