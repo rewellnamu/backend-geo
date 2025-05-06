@@ -14,4 +14,12 @@ export interface Animal {
     description: string;
     image_url: string;
   }
-  
+  // src/types/booking.type.ts
+export interface Booking {
+  id: number;
+  name: string;
+  email: string;
+  parkId: number;
+  visitDate: string; // Or Date if you're parsing it
+}
+
